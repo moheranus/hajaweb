@@ -26,11 +26,11 @@ export const MenuItems = [
         path: '/Economic',
         cName: 'dropdown-link',
     },
-    {
-        title: 'News',
-        path: '/News',
-        cName: 'dropdown-link',
-    },
+    // {
+    //     title: 'News',
+    //     path: '/News',
+    //     cName: 'dropdown-link',
+    // },
     {
         title: 'Psychology',
         path: '/Psychology',
