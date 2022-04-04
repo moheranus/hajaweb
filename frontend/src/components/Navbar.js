@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import './Navbar.css' 
 import Dropdown from './Dropdown'
+// import { Button } from './Button'
+import Hajalogo from './images/hajalogo.png'
 function Navbar() {   
     const[click, setClick] = useState(false);
     const[dropdown, setDropdown] = useState(false);
@@ -31,8 +33,9 @@ function Navbar() {
     <nav className="navbar"> 
          <div className="navbar-container">
               <Link to='/'className="navbar-logo">
-                 HAJA
-                  <img src='frontend/public/images/hajalogo.png'alt='' />
+                 
+                  
+                  <img src={Hajalogo}height={100}width={100} alt='' />
               </Link>
               <div className='menu-icon'onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
@@ -44,10 +47,11 @@ function Navbar() {
                            News <i className='fa fa-caret-down'></i>
                       </Link>
                       {dropdown && <Dropdown />}
+                      
                   </li>
                   <li className='nav-item'>
                        <Link to='/events'className='nav-links'onClick={closeMobileMenu}>
-                           Events
+                       Events
                       </Link>
                   </li>
                   <li className='nav-item'>
@@ -65,11 +69,22 @@ function Navbar() {
                            Projects
                       </Link>
                   </li>
+                  <li className='nav-item'>
+                       <Link to='/signup'className='nav-links'onClick={closeMobileMenu}>
+                           SignIn
+                      </Link>
+                  </li>
+                  
+
+                 
               </ul>
+              {/* <Button /> */}
          </div>
+         
      </nav>
     
     </>
+    
   )
 }
 
